@@ -17,12 +17,10 @@ public class netScanner {
         for (int i = 1; i < 255; i++) {
             String host = subnet + "." + i;
             if (InetAddress.getByName(host).isReachable(timeout)) {
-                //System.out.println(host + " is reachable");
                 currHost = InetAddress.getByName(host);
                 System.out.println(host + " | " + currHost.getHostName());
                 rcount++;
             } else {
-                //System.out.println(host + " is unreachable");
                 urcount++;
             }
         }
