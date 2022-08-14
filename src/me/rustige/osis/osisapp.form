@@ -46,9 +46,11 @@
           </component>
         </children>
       </grid>
-      <component id="861d9" class="javax.swing.JTable" binding="resulttable">
+      <component id="487ab" class="javax.swing.JTextArea" binding="resultbox">
         <constraints border-constraint="Center"/>
-        <properties/>
+        <properties>
+          <editable value="false"/>
+        </properties>
       </component>
     </children>
   </grid>

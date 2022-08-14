@@ -19,6 +19,7 @@ public class netScanner {
             if (InetAddress.getByName(host).isReachable(timeout)) {
                 currHost = InetAddress.getByName(host);
                 System.out.println(host + " | " + currHost.getHostName());
+                //osisapp.resultbox.append(host + " | " + currHost.getHostName());
                 rcount++;
             } else {
                 urcount++;
