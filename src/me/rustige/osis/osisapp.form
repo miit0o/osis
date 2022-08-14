@@ -34,24 +34,30 @@
           <component id="310b8" class="javax.swing.JCheckBox" binding="deadIPcheck">
             <constraints border-constraint="East"/>
             <properties>
+              <enabled value="false"/>
               <text value="Show dead IPs"/>
             </properties>
           </component>
           <component id="3c7dc" class="javax.swing.JTextField" binding="subnetfield">
             <constraints border-constraint="Center"/>
             <properties>
-              <text value="192.xxx.xxx"/>
+              <text value=""/>
               <toolTipText value="Enter the desired subnet like &quot;192.168.178&quot;"/>
             </properties>
           </component>
         </children>
       </grid>
-      <component id="487ab" class="javax.swing.JTextArea" binding="resultbox">
+      <scrollpane id="588ec">
         <constraints border-constraint="Center"/>
-        <properties>
-          <editable value="false"/>
-        </properties>
-      </component>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="9e354" class="javax.swing.JTextArea" binding="resultbox">
+            <constraints/>
+            <properties/>
+          </component>
+        </children>
+      </scrollpane>
     </children>
   </grid>
 </form>

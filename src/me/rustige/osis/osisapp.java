@@ -7,9 +7,6 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.InetAddress;
 
-import static me.rustige.osis.osis.rcount;
-import static me.rustige.osis.osis.urcount;
-
 public class osisapp {
     private JPanel osisbasepanel;
     private JButton startBtn;
@@ -18,6 +15,9 @@ public class osisapp {
     private JTextField subnetfield;
     public JTextArea resultbox;
     public static InetAddress currHost;
+
+    public static int rcount;
+    public static int urcount;
 
     public static void main (String []args){
         JFrame osisframe = new JFrame("OSIS - Open Source IP Scanner");
@@ -37,14 +37,15 @@ public class osisapp {
                 resultbox.setText("I was able to scan the following IPs:");
 
                 //Launch Scanner
-                startBtn.setText("Stop Scanning");
+                startBtn.setEnabled(false);
+                startBtn.setText("Scanning... Please wait...");
                 String subnet = subnetfield.getText();
 
                 new Thread(new Runnable() {
                     public void run() {
                         try {
                             rcount = 0;
-                            osis.urcount = 0;
+                            urcount = 0;
                             int timeout = 500;
                             for (int i = 1; i < 255; i++) {
                                 String host = subnet + "." + i;
@@ -61,6 +62,7 @@ public class osisapp {
                             System.out.println("Total reachable IPs: " + rcount);
                             System.out.println("Total unreachable IPs: " + urcount);
                             startBtn.setText("Start scanning");
+                            startBtn.setEnabled(true);
                         } catch (IOException ex) {
                             throw new RuntimeException(ex);
 
