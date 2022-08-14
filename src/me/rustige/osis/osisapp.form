@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="me.rustige.osis.osisapp">
+  <grid id="27dc6" binding="osisbasepanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="bf268" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints border-constraint="South"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="47ba8" class="javax.swing.JButton" binding="startBtn">
+            <constraints border-constraint="Center"/>
+            <properties>
+              <text value="Start Scanning"/>
+            </properties>
+          </component>
+          <component id="57b11" class="javax.swing.JButton" binding="helpBtn">
+            <constraints border-constraint="East"/>
+            <properties>
+              <text value="Help"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="abf12" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints border-constraint="North"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="310b8" class="javax.swing.JCheckBox" binding="deadIPcheck">
+            <constraints border-constraint="East"/>
+            <properties>
+              <text value="Show dead IPs"/>
+            </properties>
+          </component>
+          <component id="3c7dc" class="javax.swing.JTextField" binding="subnetfield">
+            <constraints border-constraint="Center"/>
+            <properties>
+              <text value="192.xxx.xxx"/>
+              <toolTipText value="Enter the desired subnet like &quot;192.168.178&quot;"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <component id="861d9" class="javax.swing.JTable" binding="resulttable">
+        <constraints border-constraint="Center"/>
+        <properties/>
+      </component>
+    </children>
+  </grid>
+</form>
