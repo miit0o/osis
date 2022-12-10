@@ -15,11 +15,10 @@ public class osisapp {
     private JTextField subnetfield;
     public JTextArea resultbox;
     public static InetAddress currHost;
-
     public static int rcount;
     public static int urcount;
 
-    public static void main (String []args){
+    public static void main(String[] args) {
         JFrame osisframe = new JFrame("OSIS - Open Source IP Scanner");
         osisframe.setContentPane(new osisapp().osisbasepanel);
         osisframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
