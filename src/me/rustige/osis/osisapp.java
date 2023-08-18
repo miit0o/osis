@@ -51,6 +51,7 @@ public class osisapp {
                                 if (InetAddress.getByName(host).isReachable(timeout)) {
                                     currHost = InetAddress.getByName(host);
                                     resultbox.append("\n" + host + " | " + currHost.getHostName());
+                                    System.out.println(host + " | " + currHost.getHostName());
                                     rcount++;
                                 } else {
                                     urcount++;

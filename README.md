@@ -19,6 +19,8 @@
   <h1>OSIS</h1>
   <p>
     OSIS allows you to scan your network for all used IPs in a defined subnet.
+
+You can find the "old" aka. Legacy OSIS-Version in the [osis-legacy](https://github.com/miit0o/osis/tree/osis-legacy) branch.
   </p>
 </div>
 
@@ -48,18 +50,16 @@ To start off, please head to the [releases page](https://github.com/miit0o/osis/
 
 ### Launch the application
 
-Launch the application using your terminal. Most of the time it's the following command:
+Launch the .jar File by double clicking. If that doesn't work, use the following command:
 
 `java -jar osis.jar`
 
-![OSIS](https://rustige.me/images/osis-launch.png)
+![OSIS](https://rustige.me/images/osis-home.png)
 
 <h2 align="center" id="usage">Usage</h2>
 
-### Getting email addresses
+### Getting all reachable IPs
 All you need to do is enter the desired subnet (eg. 192.168.178) and OSIS will to it's thing.
-
-![OSIS Results](https://rustige.me/images/osis-results.png)
 
 <h2 align="center" id="contributing">Contributing</h2>
 
