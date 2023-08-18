@@ -50,16 +50,16 @@ public class osisapp {
                                 String host = subnet + "." + i;
                                 if (InetAddress.getByName(host).isReachable(timeout)) {
                                     currHost = InetAddress.getByName(host);
-                                    System.out.println(host + " | " + currHost.getHostName());
                                     resultbox.append("\n" + host + " | " + currHost.getHostName());
                                     rcount++;
                                 } else {
                                     urcount++;
                                 }
                             }
-                            System.out.println("Total scanned IPs: " + 254);
-                            System.out.println("Total reachable IPs: " + rcount);
-                            System.out.println("Total unreachable IPs: " + urcount);
+
+                            resultbox.append("\nTotal scanned IPs: " + 254);
+                            resultbox.append("\nTotal reachable IPs: " + rcount);
+                            resultbox.append("\nTotal unreachable IPs: " + urcount);
                             startBtn.setText("Start scanning");
                             startBtn.setEnabled(true);
                         } catch (IOException ex) {
